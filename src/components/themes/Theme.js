@@ -1,19 +1,24 @@
 import React from 'react'
 import { useState } from 'react'
 import { StyledTheme, StyledThemeLetter, StyledButton, StyledBg, StyledRigthNumbers, StyledRigthNumber } from '../../style/theme.style'
+import { useContext } from 'react'
+import { ThemeContext } from '../../contexApi'
 
 const Theme = () => {
 
-  const [theme, setTheme] = useState(1)
+  const theme = useContext(ThemeContext)
+
+  const [themes, setThemes] = useState(1)
   
   const handleChange = () => {
-    if (theme === 1) {
-      setTheme(2)
-    }else if (theme === 2){
-      setTheme(3)
+    if (themes === 1) {
+      setThemes(2)
+    }else if (themes === 2){
+      setThemes(3)
     }else{
-      setTheme(1)
+      setThemes(1)
     }
+    theme.dispatch({type:"TOGGLE"})
   }
   
   return (

@@ -7,7 +7,7 @@ export const StyledHeader = styled.header`
   align-items: center;
   max-width: 400px;
   width: 100%;
-  padding: 40px;
+  padding: 15px;
 `
 
 export const StyledLetter = styled.span`

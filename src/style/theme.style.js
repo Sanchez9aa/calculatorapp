@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const StyledTheme = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+`
+
 export const StyledBg = styled.div`
   width: 75px;
   height: 15px;
@@ -8,7 +14,6 @@ export const StyledBg = styled.div`
   background-color: hsl(223, 31%, 20%);
   z-index: 2;
   position: fixed;
-  right: 10%;
 `
 export const StyledButton = styled.div`
   width: 15px;
@@ -25,8 +30,7 @@ export const StyledRigthNumbers = styled.div`
   display: flex;
   justify-content: space-between;
   position: absolute;
-  top: 15px;
-  right: 10%;
+  top: 25px;
 `
 
 export const StyledRigthNumber = styled.span`
@@ -34,8 +38,7 @@ export const StyledRigthNumber = styled.span`
 `
 
 export const StyledThemeLetter = styled.span`
-  align-items: flex-end;
-  display: flex;
-  margin-right: 15px;
+  font-size: 18px;
+  margin-right: 85px;
   color: #fff
 `

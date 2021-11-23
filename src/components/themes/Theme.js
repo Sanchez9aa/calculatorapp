@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { StyledThemeLetter, StyledButton, StyledBg, StyledRigthNumbers, StyledRigthNumber } from '../../style/theme.style'
+import { StyledTheme, StyledThemeLetter, StyledButton, StyledBg, StyledRigthNumbers, StyledRigthNumber } from '../../style/theme.style'
 
 const Theme = () => {
 
@@ -19,19 +19,17 @@ const Theme = () => {
   console.log(theme)
 
   return (
-    <>
-    <div>
-    <StyledThemeLetter>Theme</StyledThemeLetter>
-    </div>
-    <StyledRigthNumbers>
-      <StyledRigthNumber>1</StyledRigthNumber>
-      <StyledRigthNumber>2</StyledRigthNumber>
-      <StyledRigthNumber>3</StyledRigthNumber>
-    </StyledRigthNumbers>
-    <StyledBg>
-      <StyledButton theme={theme} onClick={() => handleChange()}/>
-    </StyledBg>
-    </>
+    <StyledTheme>
+      <StyledThemeLetter>THEME</StyledThemeLetter>
+      <StyledRigthNumbers>
+        <StyledRigthNumber>1</StyledRigthNumber>
+        <StyledRigthNumber>2</StyledRigthNumber>
+        <StyledRigthNumber>3</StyledRigthNumber>
+      </StyledRigthNumbers>
+      <StyledBg>
+        <StyledButton theme={theme} onClick={() => handleChange()}/>
+      </StyledBg>
+    </StyledTheme>
   )
 }
 

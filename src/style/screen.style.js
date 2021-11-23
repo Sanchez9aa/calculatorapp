@@ -13,6 +13,6 @@ export const StyledScreen = styled.div`
 
 export const StyledResult = styled.span`
 color: white;
-font-size: 20px;
+font-size: 24px;
 text-align: flex-end;
 `

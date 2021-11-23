@@ -14,9 +14,9 @@ export const StyledButtonsWrapper = styled.div`
 
 export const StyledButton = styled.span`
   padding: 25px;
-  color: hsl(223, 31%, 20%);
+  color: ${props => props.color === "orange" ? "white" : "hsl(223, 31%, 20%)"};
   background-color: ${props => props.color === "orange" ? "hsl(6, 63%, 50%)" : "hsl(30, 25%, 89%)"};
-  box-shadow: ${props => props.color === "orange" ? "1px 5px 5px -1px hsl(6, 70%, 34%)" : "1px 5px 5px -1px hsl(28, 16%, 65%)"};
+  box-shadow: ${props => props.color === "orange" ? "0 4px 0 0 hsl(6, 70%, 34%)" : "0 4px 0 0 hsl(28, 16%, 65%)"};
   cursor: pointer;
   border-radius: 5px;
   font-size: 40px;
@@ -29,7 +29,7 @@ export const StyledButtonDark = styled.span`
   padding: 25px;
   color: hsl(223, 31%, 20%);
   background-color: hsl(225, 21%, 49%);
-  box-shadow: 1px 5px 5px -1px hsl(224, 28%, 35%);
+  box-shadow: 0 4px 0 0 hsl(224, 28%, 35%);
   cursor: pointer;
   border-radius: 5px;
   font-size: 20px;

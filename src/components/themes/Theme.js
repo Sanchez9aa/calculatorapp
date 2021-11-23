@@ -16,8 +16,6 @@ const Theme = () => {
     }
   }
   
-  console.log(theme)
-
   return (
     <StyledTheme>
       <StyledThemeLetter>THEME</StyledThemeLetter>

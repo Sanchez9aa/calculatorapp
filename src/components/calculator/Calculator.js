@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from '../header/Header'
-import Screen from '../screen/Screen'
 import Buttons from '../buttons/Buttons'
 import { StyledCalculator } from '../../style/calculator.style'
 
@@ -16,7 +15,6 @@ const Calculator = () => {
   return (
     <StyledCalculator>
       <Header />
-      <Screen />
       <Buttons />
     </StyledCalculator>
   )

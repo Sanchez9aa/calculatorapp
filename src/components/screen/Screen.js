@@ -1,11 +1,12 @@
 import React from 'react'
 import { StyledResult, StyledScreen } from '../../style/screen.style'
 
-const Screen = () => {
+const Screen = ({value}) => {
+  console.log(value)
   return (
     <StyledScreen>
       <StyledResult>
-        300
+        {!value ? 0 : value}
       </StyledResult>
     </StyledScreen>
   )

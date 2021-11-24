@@ -1,30 +1,27 @@
-import { createContext, useReducer  } from "react";
+import { createContext, useReducer } from "react";
 
 export const ThemeContext = createContext()
 
-const initialState = {theme: 1}
+const initialState = { theme: 1 }
 
-const themeReducer = (state = initialState, {type, payload}) => {
-    switch(type){
-        case "TOGGLE":
-            if(state === 1){
-                state = 2
-                return {theme: state}
-            }else if(state === 2){
-                state = 3
-                return {theme: state}
-            }else if(state === 3){
-                state = 1
-                return {theme: state}
-            }
-    }
+const themeReducer = (state = initialState, { type, payload }) => {
+	switch (type) {
+		case "1":
+			return { ...state, theme: 2 }
+		case "2":
+			return { ...state, theme: 3 }
+		case "3":
+			return { ...state, theme: 1 }
+		default:
+			return state
+		}
 }
 
-export const ThemeProvider = (props) =>{
-    const [state, dispatch] = useReducer(themeReducer, initialState)
-    return (
-        <ThemeContext.Provider value={{state, dispatch}}>
-            {props.children}
-        </ThemeContext.Provider>
-    )
+export const ThemeProvider = (props) => {
+	const [state, dispatch] = useReducer(themeReducer, initialState)
+	return (
+		<ThemeContext.Provider value={{ state, dispatch }}>
+			{props.children}
+		</ThemeContext.Provider>
+	)
 }

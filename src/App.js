@@ -4,13 +4,23 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
-  body {
-    font-family: Spartan, sans-serif;
-  }
+  *{
+      padding: 0;
+      margin: 0;
+    }
+
+    html{
+      min-height: 100%;
+    }
+
+    body{
+      min-height: calc(100vh - 16px);
+      font-family: Spartan, sans-serif;
+    }
+    #root{
+      min-height: calc(100vh - 16px)
+    }
 `
-
-
-
 const App = () => {
   return (
     <>

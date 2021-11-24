@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledScreen = styled.div`
-  background-color: hsl(224, 36%, 15%);
+  background: ${props => props.theme === 1 ? "hsl(224, 36%, 15%)" : props.theme === 2 ? "hsl(0, 0%, 93%)" : "hsl(268, 71%, 12%)"};
   width: 100%;
   max-width: 400px;
   padding: 40px;
@@ -9,10 +9,10 @@ export const StyledScreen = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-bottom: 15px;
-`  
+`
 
 export const StyledResult = styled.span`
-color: white;
+color: ${props => props.theme === 1 ? "hsl(0, 0%, 100%)" : props.theme === 2 ? "hsl(60, 10%, 19%)" : "hsl(52, 100%, 62%)"};
 font-size: 24px;
 text-align: flex-end;
 `

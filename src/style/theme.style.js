@@ -10,8 +10,7 @@ export const StyledBg = styled.div`
   width: 75px;
   height: 15px;
   border-radius: 20px;
-  border: 1px solid hsl(222, 26%, 31%);
-  background-color: hsl(223, 31%, 20%);
+  background: ${props => props.theme === 1 ? "hsl(223, 31%, 20%)" : props.theme === 2 ? "hsl(0, 5%, 81%)" : "hsl(268, 71%, 12%)"};
   z-index: 2;
   position: fixed;
 `
@@ -22,7 +21,7 @@ export const StyledButton = styled.div`
   background-color: red;
   position: absolute;
   cursor: pointer;
-  left: ${props => props.theme === 1 ? "0" : ( props.theme === 2 ? "32px" : "64px")};
+  left: ${props => props.theme === 1 ? "0" : props.theme === 2 ? "32px" : "64px"};
 `
 
 export const StyledRigthNumbers = styled.div`
@@ -34,11 +33,13 @@ export const StyledRigthNumbers = styled.div`
 `
 
 export const StyledRigthNumber = styled.span`
-  color: #fff;
-`
+  color: ${props => props.theme === 1 ? "hsl(0, 0%, 100%)" : props.theme === 2 ? "hsl(60, 10%, 19%)" : "hsl(52, 100%, 62%)"};
+  font-weight: 700;
+  `
 
 export const StyledThemeLetter = styled.span`
-  font-size: 18px;
-  margin-right: 85px;
-  color: #fff
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 95px;
+  color: ${props => props.theme === 1 ? "hsl(0, 0%, 100%)" : props.theme === 2 ? "hsl(60, 10%, 19%)" : "hsl(52, 100%, 62%)"}
 `

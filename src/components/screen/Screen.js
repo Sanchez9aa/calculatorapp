@@ -1,11 +1,11 @@
 import React from 'react'
 import { StyledResult, StyledScreen } from '../../style/screen.style'
 
-const Screen = ({value}) => {
-  console.log(value)
+const Screen = ({value, theme}) => {
+
   return (
-    <StyledScreen>
-      <StyledResult>
+    <StyledScreen theme={theme}>
+      <StyledResult theme={theme}>
         {!value ? 0 : value}
       </StyledResult>
     </StyledScreen>

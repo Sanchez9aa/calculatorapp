@@ -2,10 +2,11 @@ import React from 'react'
 import Theme from '../themes/Theme'
 import { StyledHeader, StyledLetter } from '../../style/header.style'
 
-const Header = () => {
+const Header = ({theme}) => {
+  console.log(theme)
   return (
     <StyledHeader>
-      <StyledLetter>Calc</StyledLetter>
+      <StyledLetter theme={theme}>Calc</StyledLetter>
       <Theme/>
     </StyledHeader>
   )

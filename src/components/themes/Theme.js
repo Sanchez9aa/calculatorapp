@@ -13,24 +13,26 @@ const Theme = () => {
   const handleChange = () => {
     if (themes === 1) {
       setThemes(2)
+      theme.dispatch({type:"1"})
     }else if (themes === 2){
       setThemes(3)
+      theme.dispatch({type:"2"})
     }else{
       setThemes(1)
+      theme.dispatch({type:"3"})
     }
-    theme.dispatch({type:"TOGGLE"})
   }
   
   return (
     <StyledTheme>
-      <StyledThemeLetter>THEME</StyledThemeLetter>
+      <StyledThemeLetter theme={themes}>THEME</StyledThemeLetter>
       <StyledRigthNumbers>
-        <StyledRigthNumber>1</StyledRigthNumber>
-        <StyledRigthNumber>2</StyledRigthNumber>
-        <StyledRigthNumber>3</StyledRigthNumber>
+        <StyledRigthNumber theme={themes}>1</StyledRigthNumber>
+        <StyledRigthNumber theme={themes}>2</StyledRigthNumber>
+        <StyledRigthNumber theme={themes}>3</StyledRigthNumber>
       </StyledRigthNumbers>
-      <StyledBg>
-        <StyledButton theme={theme} onClick={() => handleChange()}/>
+      <StyledBg theme={themes}>
+        <StyledButton theme={themes} onClick={() => handleChange()}/>
       </StyledBg>
     </StyledTheme>
   )

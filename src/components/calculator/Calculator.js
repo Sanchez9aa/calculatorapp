@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../header/Header'
-import Buttons from '../buttons/Buttons'
+import Main from '../main/Main'
 import { StyledCalculator } from '../../style/calculator.style'
 import {useContext} from 'react'
 import { ThemeContext } from '../../contexApi'
@@ -8,13 +8,12 @@ import { ThemeContext } from '../../contexApi'
 const Calculator = () => {
 
   const theme = useContext(ThemeContext)
+  const themes = theme.state.theme
 
-  console.log(theme)
-  
   return (
-    <StyledCalculator>
-      <Header />
-      <Buttons />
+    <StyledCalculator theme={themes}>
+      <Header theme={themes}/>
+      <Main theme={themes}/>
     </StyledCalculator>
   )
 }

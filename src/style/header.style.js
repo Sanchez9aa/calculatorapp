@@ -8,6 +8,10 @@ export const StyledHeader = styled.header`
   max-width: 480px;
   width: 100%;
   padding-top: 15px;
+
+  @media screen and (max-width: 480px){
+    width: 85%;
+  }
 `
 
 export const StyledLetter = styled.span`

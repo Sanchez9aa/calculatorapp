@@ -11,6 +11,10 @@ export const StyledButtonsWrapper = styled.div`
   max-width: 400px;
   border-radius: 10px;
   transition: .5s linear;
+  @media screen and (max-width: 480px){
+    width: 75%;
+    grid-gap: 15px
+  }
 `
 
 export const StyledButton = styled.span`
@@ -26,6 +30,14 @@ export const StyledButton = styled.span`
     grid-column: -1 / 3;
   }
   transition: .5s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: 480px){
+    padding: 20px;
+    height: 40%;
+    width: 40%;
+  }
 `
 export const StyledButtonDark = styled.span`
   padding: 25px;
@@ -43,6 +55,14 @@ export const StyledButtonDark = styled.span`
     grid-column: 1 / 3;
   }
   transition: .5s linear;
+  @media screen and (max-width: 480px){
+    padding: 20px;
+    height: 40%;
+    width: 40%;
+    &:nth-last-child(2){
+    width: 72%;
+  }
+  }
 `
 
 export const StyledEqualButton = styled.span`
@@ -58,6 +78,14 @@ export const StyledEqualButton = styled.span`
     grid-column: -1 / 3;
   }
   transition: .5s linear;
+  @media screen and (max-width: 480px){
+    padding: 20px;
+    height: 40%;
+    width: 40%;
+    &:nth-last-child(1){
+      width: 72%;
+    }
+  }
 `
 
 export const StyledHiddenVissibility = styled.h1`

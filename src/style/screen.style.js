@@ -10,6 +10,9 @@ export const StyledScreen = styled.div`
   justify-content: flex-end;
   margin-bottom: 15px;
   transition: .5s linear;
+  @media screen and (max-width: 480px){
+    width: 75%;
+  }
 `
 
 export const StyledResult = styled.span`

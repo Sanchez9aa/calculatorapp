@@ -13,5 +13,6 @@ export const StyledHeader = styled.header`
 export const StyledLetter = styled.span`
 color: ${props => props.theme === 1 ? "#fff" : props.theme === 2 ? "hsl(60, 10%, 19%)" : "hsl(52, 100%, 62%)"};
 font-weight: 700;
-font-size: 24px
+font-size: 24px;
+transition: .5s linear;
 `

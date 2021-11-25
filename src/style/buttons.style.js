@@ -10,6 +10,7 @@ export const StyledButtonsWrapper = styled.div`
   width: 100%;
   max-width: 400px;
   border-radius: 10px;
+  transition: .5s linear;
 `
 
 export const StyledButton = styled.span`
@@ -24,6 +25,7 @@ export const StyledButton = styled.span`
   &:nth-last-child(1){
     grid-column: -1 / 3;
   }
+  transition: .5s linear;
 `
 export const StyledButtonDark = styled.span`
   padding: 25px;
@@ -40,6 +42,7 @@ export const StyledButtonDark = styled.span`
   &:nth-last-child(2){
     grid-column: 1 / 3;
   }
+  transition: .5s linear;
 `
 
 export const StyledEqualButton = styled.span`
@@ -54,6 +57,7 @@ export const StyledEqualButton = styled.span`
   &:nth-last-child(1){
     grid-column: -1 / 3;
   }
+  transition: .5s linear;
 `
 
 export const StyledHiddenVissibility = styled.h1`
